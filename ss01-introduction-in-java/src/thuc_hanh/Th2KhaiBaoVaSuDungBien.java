@@ -1,4 +1,6 @@
-public class Main {
+package thuc_hanh;
+
+public class Th2_Khai_Bao_Va_Su_Dung_Bien {
     public static void main(String[] args) {
         int i = 10; // khai báo biến i là kiểu int có giá trị là 10
         float f = 20.5f; // Khai báo biến f có kiểu là float có giá trị là 20.5
@@ -6,11 +8,12 @@ public class Main {
         boolean b = true; // Khai báo biến b là kiểu boolean có giá trị là true
         char c = 'a'; // Khai báo biến c có kiểu là char có giá trị là kí tự a
         String s = "Hà Nội"; //Khai báo biến s có kiểu là String có giá trị là chuỗi Hà Nội
+
+        System.out.println("i = " + i);
+        System.out.println("f = " + f);
+        System.out.println("d = " + d);
+        System.out.println("b = " + b);
+        System.out.println("c = " + c);
+        System.out.println("s = " + s);
     }
 }
-                System.out.println("i = "+i);
-                System.out.println("f = "+f);
-                System.out.println("d = "+d);
-                System.out.println("b = "+b);
-                System.out.println("c = "+c);
-                System.out.println("s = "+s);
