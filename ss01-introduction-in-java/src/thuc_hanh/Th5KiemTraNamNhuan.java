@@ -2,7 +2,7 @@ package thuc_hanh;
 
 import java.util.Scanner;
 
-public class Th5_Kiem_Tra_Nam_Nhuan {
+public class Th5KiemTraNamNhuan {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int year;

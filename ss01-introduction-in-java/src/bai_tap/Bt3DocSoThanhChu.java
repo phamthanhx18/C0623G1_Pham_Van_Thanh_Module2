@@ -32,7 +32,11 @@ public class Bt3DocSoThanhChu {
                         }
                     } else {
                         int count = Integer.parseInt(words[i]);
-                        System.out.print(number[count - 1] + " teen");
+                        if (count > 0) {
+                            System.out.print(number[count - 1] + " teen");
+                        } else {
+                            System.out.print("ten");
+                        }
                     }
                 }
             } else {

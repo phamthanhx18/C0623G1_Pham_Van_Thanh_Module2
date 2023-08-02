@@ -3,7 +3,7 @@ package thuc_hanh;
 import java.util.Scanner;
 
 
-public class Th6_Chi_So_Can_Nang {
+public class Th6ChiSoCanNang {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

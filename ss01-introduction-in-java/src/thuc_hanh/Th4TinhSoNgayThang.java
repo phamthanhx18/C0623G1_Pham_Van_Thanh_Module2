@@ -1,7 +1,7 @@
 package thuc_hanh;
 
 import java.util.Scanner;
-public class Th4_Tinh_So_Ngay_Thang {
+public class Th4TinhSoNgayThang {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
