@@ -5,15 +5,15 @@ public class Exercise2Show20Prime {
         int[] numbers = new int[20];
         int count = 0;
         int N = 2;
-
+        // N la bien duoc dat theo de bai
         do {
-            int countDivision = 0;
+            int countCheckPrime = 0;
             for (int j = 2; j < (N - 1); j++) {
                 if (N % j == 0) {
-                    countDivision++;
+                    countCheckPrime++;
                 }
             }
-            if (countDivision == 0) {
+            if (countCheckPrime == 0) {
                 numbers[count] = N;
                 count++;
             }
