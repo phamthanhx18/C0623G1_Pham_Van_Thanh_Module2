@@ -2,7 +2,7 @@ package bai_tap;
 
 import java.util.Scanner;
 
-public class Bt1HienThiLoiChao {
+public class Exercise1ShowGreetings {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your name: ");

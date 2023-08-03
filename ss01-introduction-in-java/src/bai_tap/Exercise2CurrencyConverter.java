@@ -2,7 +2,7 @@ package bai_tap;
 
 import java.util.Scanner;
 
-public class Bt2UngDungChuyenDoiTienTe {
+public class Exercise2CurrencyConverter {
     public static void main(String[] args) {
         final int rate = 23000;
         Scanner input = new Scanner(System.in);
