@@ -1,4 +1,4 @@
-package thuc_hanh;
+package practice;
 
 public class Th2KhaiBaoVaSuDungBien {
     public static void main(String[] args) {

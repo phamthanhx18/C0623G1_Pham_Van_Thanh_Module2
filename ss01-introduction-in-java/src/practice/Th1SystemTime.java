@@ -1,4 +1,4 @@
-package thuc_hanh;
+package practice;
 
 import java.util.Date;
 
