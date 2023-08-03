@@ -2,7 +2,7 @@ package practice;
 
 import java.util.Scanner;
 
-public class Th5KiemTraNamNhuan {
+public class LapYear {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int year;

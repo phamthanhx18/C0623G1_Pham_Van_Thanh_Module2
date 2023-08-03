@@ -1,7 +1,7 @@
 package practice;
 
 import java.util.Scanner;
-public class Th4TinhSoNgayThang {
+public class NumbersOfDay {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
