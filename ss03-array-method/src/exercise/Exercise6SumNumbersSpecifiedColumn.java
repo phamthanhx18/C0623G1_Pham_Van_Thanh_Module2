@@ -58,8 +58,8 @@ public class Exercise6SumNumbersSpecifiedColumn {
             }
         // chi cho nhap cac cot la so be <= length cua mang co length be nhat
         } while (sumColumn>minLength);
-        System.out.println("Mang duoc khoi tao la: " + valueOfIntegerArray);
-        System.out.println("Cot muon tinh tong la: " + sumColumn);
-        System.out.println("Tong cac gia tri cua cot "+sumColumn+" ("+valueUseToSum+"): " + totalColums);
+        System.out.println("The array is initialized as: " + valueOfIntegerArray);
+        System.out.println("The column you want to sum is: " + sumColumn);
+        System.out.println("Sum of column values "+sumColumn+" ("+valueUseToSum+"): " + totalColums);
     }
 }

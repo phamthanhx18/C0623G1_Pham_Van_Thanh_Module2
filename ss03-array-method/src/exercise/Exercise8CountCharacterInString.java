@@ -27,6 +27,6 @@ public class Exercise8CountCharacterInString {
                 count++;
             }
         }
-        System.out.println(character +" xuất hiện "+ count + " lần ở vị trí " +index);
+        System.out.println(character +" display "+ count + " times in position " +index);
     }
 }
