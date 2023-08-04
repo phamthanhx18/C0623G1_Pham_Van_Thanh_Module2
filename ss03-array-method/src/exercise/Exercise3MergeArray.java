@@ -13,15 +13,19 @@ public class Exercise3MergeArray {
         System.out.println("Length of Array 2: ");
         int lengthArray2 = input.nextInt();
 
+        // Nhap do dai cho 2 mang
         int[] integerArray1 = new int[lengthArray1];
         int[] integerArray2 = new int[lengthArray2];
 
+        // Nhap cac phan tu trong mang 1
         int i = 0;
         while (i < integerArray1.length) {
             System.out.print("Enter element " + (i + 1) + " of integerArray1 : ");
             integerArray1[i] = scanner.nextInt();
             i++;
         }
+
+        // Nhap cac phan tu trong mang 2
         int j = 0;
         while (j < integerArray2.length) {
             System.out.print("Enter element " + (j + 1) + " of integerArray2 : ");
@@ -29,6 +33,7 @@ public class Exercise3MergeArray {
             j++;
         }
 
+        // Tao mang moi de luu gia tri khi gop
         int[] integerArrayNew = new int[lengthArray1 + lengthArray2];
         int count = 0;
         for (int k = 0; k < lengthArray1; k++) {
