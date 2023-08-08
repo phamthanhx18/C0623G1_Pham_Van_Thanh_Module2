@@ -1,7 +1,5 @@
 package exercise.QuadraticEquation;
 
-import java.lang.String;
-
 public class QuadraticEquation {
     double numberA;
     double numberB;
@@ -25,15 +23,26 @@ public class QuadraticEquation {
         return numberC;
     }
 
-    public String getDiscriminant() {
-        double delta = (Math.pow(this.getNumberB(), 2) - 4 * this.getNumberA() * this.getNumberC());
-        if (delta < 0) {
-            return "The equation has no roots";
-        } else if (delta == 0) {
-            return "Phuong trinh co 2 nghiem x1 = x2 la " + (-this.getNumberB() / (2 * this.getNumberA()));
+    public double getDiscriminant() {
+        double delta = Math.pow(this.getNumberB(), 2) - (4 * this.getNumberA() * this.getNumberC());
+        return delta;
+    }
+
+    public double getRoot1() {
+        if (this.getDiscriminant() >= 0) {
+            double r1 = (-this.getNumberB() + Math.sqrt(this.getDiscriminant())) / (2 * this.getNumberA());
+            return r1;
         } else {
-            return "Phuong trinh co 2 nghiem x1 la " + ((-this.getNumberB() + Math.sqrt(delta)) / (2 * this.getNumberA())) +
-                    " x2 la " + ((-this.getNumberB() - Math.sqrt(delta)) / (2 * this.getNumberA()));
+            return 0;
+        }
+    }
+
+    public double getRoot2() {
+        if (this.getDiscriminant() >= 0) {
+            double r2 = (-this.getNumberB() - Math.sqrt(this.getDiscriminant())) / (2 * this.getNumberA());
+            return r2;
+        } else {
+            return 0;
         }
     }
 }

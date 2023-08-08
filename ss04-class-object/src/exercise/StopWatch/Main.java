@@ -4,9 +4,8 @@ import java.time.LocalTime;
 
 public class Main {
     public static void main(String[] args) {
-
-        // lay time bat dau;
-        LocalTime timeStart = LocalTime.now();
+        StopWatch time = new StopWatch();
+        time.start();
 
         // Tao mang random 100.000 number
         int[] arrayThousandNumber = new int[100000];
@@ -27,19 +26,14 @@ public class Main {
                 }
             }
         }
-        LocalTime timeEnd = LocalTime.now();
-        System.out.println("");
 
-        // Tao doi tuong bat dau va ket thuc;
-        StopWatch time = new StopWatch(timeStart, timeEnd);
+        time.stop();
 
-        // In ra thoi diem chay
-        System.out.println(time.getStartTime());
+        System.out.println(" ");
 
-        // In ra thoi diem ket thuc
-        System.out.println(time.getEndTime());
+        int totalTime = time.getElapsedTime();
 
         // Dung phuong thuc getElapsedTime va in ra
-        System.out.println(time.getElapsedTime()+" ms");
+        System.out.println(totalTime+" ms");
     }
 }

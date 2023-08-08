@@ -13,6 +13,12 @@ public class Main {
         double numberC = scanner.nextDouble();
 
         QuadraticEquation equation = new QuadraticEquation(numberA , numberB, numberC);
-        System.out.println(equation.getDiscriminant());
+        if (equation.getDiscriminant() > 0) {
+            System.out.println("The equation has two roots: r1 = " + equation.getRoot1() + ", r2 = " + equation.getRoot2());
+        } else if (equation.getDiscriminant() == 0) {
+            System.out.println("The equation has one root: r1 = r2 = " + equation.getRoot1());
+        } else {
+            System.out.println("The equation has no root");
+        }
     }
 }
