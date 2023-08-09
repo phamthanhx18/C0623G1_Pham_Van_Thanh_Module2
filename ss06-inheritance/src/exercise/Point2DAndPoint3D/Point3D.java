@@ -24,8 +24,8 @@ public class Point3D extends Point2D {
     }
 
     public float [] getXYZ() {
-        float [] getXYZ = {this.getX(),this.getY(),this.getZ()};
-        return getXYZ;
+        float [] arrayXYZ = {this.getX(),this.getY(),this.getZ()};
+        return arrayXYZ;
     }
 
     @Override

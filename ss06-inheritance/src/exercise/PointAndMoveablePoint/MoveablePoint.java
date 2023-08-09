@@ -40,8 +40,8 @@ public class MoveablePoint extends Point {
     }
 
     public float[] getSpeed() {
-        float[] getSpeed = {this.getxSpeed(), this.getySpeed()};
-        return getSpeed;
+        float[] arraySpeed = {this.getxSpeed(), this.getySpeed()};
+        return arraySpeed;
     }
 
     @Override
