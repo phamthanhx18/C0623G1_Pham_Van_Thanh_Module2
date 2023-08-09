@@ -7,13 +7,6 @@ public class Student {
     public Student () {
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getClasses() {
-        return classes;
-    }
 
     public void setName(String name) {
         this.name = name;
@@ -21,9 +14,5 @@ public class Student {
 
     public void setClasses(String classes) {
         this.classes = classes;
-    }
-
-    public String displayStudent() {
-        return "Name: "+this.getName()+";"+"Classes: "+this.getClasses();
     }
 }
