@@ -1,8 +1,8 @@
 package exercise.PointAndMoveablePoint;
 
 public class MoveablePoint extends Point {
-    float xSpeed;
-    float ySpeed;
+    private float xSpeed;
+    private float ySpeed;
 
     public MoveablePoint() {
     }
