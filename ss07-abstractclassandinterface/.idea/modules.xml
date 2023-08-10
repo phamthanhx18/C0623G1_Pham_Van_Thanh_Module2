@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ss05-access-modifier-static.iml" filepath="$PROJECT_DIR$/ss05-access-modifier-static.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ss07-abstractclassandinterface.iml" filepath="$PROJECT_DIR$/ss07-abstractclassandinterface.iml" />
     </modules>
   </component>
 </project>
