@@ -29,11 +29,11 @@ public class Circle extends Shape implements Colorable {
     public String toString() {
         this.howToColor();
         return "Circle{" +
-                "\n Color=" + this.getColor() +
-                "\n isFilled=" + this.isFilled() +
-                "\n Radius=" + this.getRadius() +
-                "\n Area=" + this.getArea() +
-                "\n Perimeter=" + this.getPerimeter() +
+                "\nColor=" + this.getColor() +
+                "\nisFilled=" + this.isFilled() +
+                "\nRadius=" + this.getRadius() +
+                "\nArea=" + this.getArea() +
+                "\nPerimeter=" + this.getPerimeter() +
                 "}\n";
     }
 

@@ -7,7 +7,7 @@ public class Main {
 
         for (Resizeable shape : shapes) {
             double oldArea = shape.getArea();
-            double resizePercentage = Math.random() * 100;
+            double resizePercentage = Math.random()*100+1;
             shape.resize(resizePercentage);
             double newArea = shape.getArea();
             System.out.println("Dien tich " + shape + " truoc va sau khi resize la " + resizePercentage + "%: " + oldArea + " va " + newArea);
