@@ -1,19 +1,15 @@
 package model;
 
 public class Teacher extends Person {
-    private String expertise;
+    private final String level;
 
-    public Teacher(String code, String name, String birthdate, String gender, String expertise) {
+    public Teacher(String code, String name, String birthdate, String gender, String level) {
         super(code, name, birthdate, gender);
-        this.expertise = expertise;
+        this.level = level;
     }
 
-    public String getExpertise() {
-        return expertise;
-    }
-
-    public void setExpertise(String expertise) {
-        this.expertise = expertise;
+    public String getLevel() {
+        return level;
     }
 
     @Override
@@ -23,7 +19,7 @@ public class Teacher extends Person {
                 ", name='" + getName() + '\'' +
                 ", birthdate='" + getBirthdate() + '\'' +
                 ", gender='" + getGender() + '\'' +
-                ", expertise='" + expertise + '\'' +
+                ", level='" + getLevel() + '\'' +
                 '}';
     }
 }

@@ -6,6 +6,10 @@ public abstract class Person {
     private String birthdate;
     private String gender;
 
+    public Person() {
+
+    }
+
     public Person(String code, String name, String birthdate, String gender) {
         this.code = code;
         this.name = name;
@@ -17,32 +21,16 @@ public abstract class Person {
         return code;
     }
 
-    public void setCode(String code) {
-        this.code = code;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getBirthdate() {
         return birthdate;
     }
 
-    public void setBirthdate(String birthdate) {
-        this.birthdate = birthdate;
-    }
-
     public String getGender() {
         return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
     }
 
     @Override

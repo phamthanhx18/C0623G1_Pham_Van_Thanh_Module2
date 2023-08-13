@@ -1,8 +1,8 @@
-import view.PersonView;
+import controller.MainController;
 
 public class Main {
     public static void main(String[] args) {
-        PersonView personView = new PersonView();
-        personView.manager();
+        MainController mainController = new MainController();
+        mainController.run();
     }
 }

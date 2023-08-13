@@ -1,8 +1,9 @@
 package model;
 
+//Student class
 public class Student extends Person {
-    private String classes;
-    private int score;
+    private final String classes;
+    private final int score;
 
     public Student(String code, String name, String birthdate, String gender, String classes, int score) {
         super(code, name, birthdate, gender);
@@ -14,27 +15,19 @@ public class Student extends Person {
         return classes;
     }
 
-    public void setClasses(String classes) {
-        this.classes = classes;
-    }
-
     public int getScore() {
         return score;
     }
 
-    public void setScore(int score) {
-        this.score = score;
-    }
-
     @Override
     public String toString() {
-        return "Studen{" +
+        return "Student{" +
                 "code='" + getCode() + '\'' +
                 ", name='" + getName() + '\'' +
                 ", birthdate='" + getBirthdate() + '\'' +
                 ", gender='" + getGender() + '\'' +
-                ", class='" + classes + '\'' +
-                ", score=" + score+
+                ", classes='" + getClasses() + '\'' +
+                ", score=" + getScore() +
                 '}';
     }
 }
