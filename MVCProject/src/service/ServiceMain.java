@@ -15,8 +15,8 @@ public class ServiceMain {
 
     public ServiceMain() {
         sc = new Scanner(System.in);
-        teachers = new Teacher[100];
-        students = new Student[100];
+        teachers = new Teacher[10];
+        students = new Student[10];
         numOfTeachers = 0;
         numOfStudents = 0;
     }

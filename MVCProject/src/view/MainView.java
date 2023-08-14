@@ -10,6 +10,7 @@ public class MainView {
         System.out.println("2. Xóa giảng viên hoặc học sinh");
         System.out.println("3. Xem danh sách giảng viên hoặc học sinh");
         System.out.println("4. Thoát");
+        System.out.println("Mời chọn chức nang:");
     }
 
     public void displayTeacherList(Teacher[] teachers, int numOfTeachers) {

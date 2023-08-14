@@ -7,13 +7,12 @@ import view.MainView;
 public class MainController {
     public void run() {
         int option;
+        ServiceMain serviceMain = new ServiceMain();
         do {
-            ServiceMain serviceMain = new ServiceMain();
             MainView view = new MainView();
             Scanner sc = new Scanner(System.in);
 
             view.displayMainMenu();
-            System.out.println("Mời chọn chức nang:");
             option = sc.nextInt();
             int choice;
             switch (option) {
