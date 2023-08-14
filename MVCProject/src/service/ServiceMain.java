@@ -7,9 +7,9 @@ import model.Teacher;
 import view.MainView;
 
 public class ServiceMain {
-    private final Scanner sc;
-    private final Teacher[] teachers;
-    private final Student[] students;
+    private Scanner sc;
+    private Teacher[] teachers;
+    private Student[] students;
     private int numOfTeachers;
     private int numOfStudents;
 

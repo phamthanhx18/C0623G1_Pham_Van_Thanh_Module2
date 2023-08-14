@@ -1,7 +1,7 @@
 package model;
 
 public class Teacher extends Person {
-    private final String level;
+    private String level;
 
     public Teacher(String code, String name, String birthdate, String gender, String level) {
         super(code, name, birthdate, gender);

@@ -2,8 +2,8 @@ package model;
 
 //Student class
 public class Student extends Person {
-    private final String classes;
-    private final int score;
+    private String classes;
+    private int score;
 
     public Student(String code, String name, String birthdate, String gender, String classes, int score) {
         super(code, name, birthdate, gender);
