@@ -1,59 +1,58 @@
 package controller;
 
 import java.util.Scanner;
-import service.ServiceMain;
 import view.MainView;
 
 public class MainController {
     public void run() {
         int option;
-        ServiceMain serviceMain = new ServiceMain();
-        do {
-            MainView view = new MainView();
-            Scanner sc = new Scanner(System.in);
+        MainView view = new MainView();
+        StudentController studentController = new StudentController();
+        TeacherController teacherController = new TeacherController();
 
+        Scanner sc = new Scanner(System.in);
+        do {
             view.displayMainMenu();
-            option = sc.nextInt();
+            option = Integer.parseInt(sc.nextLine());
             int choice;
+            int remove;
             switch (option) {
                 case 1:
-                    System.out.println("Chọn: \n" +
-                            "1. Thêm mới giáo viên \n"+
-                            "2. Thêm mới học sinh");
-                    choice = sc.nextInt();
-                    sc.nextLine();
+                    view.objectAction();
+                    choice = Integer.parseInt(sc.nextLine());
                     if (choice==1) {
-                        serviceMain.addTeacher();
+                        teacherController.createTeacher(view.inputInfoTeacher());
                     } else if (choice==2){
-                        serviceMain.addStudent();
+                        studentController.createStudent(view.inputInfoStudent());
                     } else {
                         view.displayInvalidInput();
                     }
                     break;
                 case 2:
-                    System.out.println("Chọn: \n" +
-                            "1. Xoá giáo viên \n"+
-                            "2. Xoá học sinh");
-                    choice = sc.nextInt();
-                    sc.nextLine();
+                    view.objectAction();
+                    choice = Integer.parseInt(sc.nextLine());
                     if (choice==1) {
-                        serviceMain.removeTeacher();
+                        remove = view.codeTeacherRemove();
+                        if (view.confirmDelete()) {
+                            teacherController.removeTeacher(remove);
+                        }
+                        break;
                     } else if (choice==2){
-                        serviceMain.removeStudent();
+                        remove = view.codeStudentRemove();
+                        if (view.confirmDelete()) {
+                            studentController.removeStudent(remove);
+                        }
                     } else {
                         view.displayInvalidInput();
                     }
                     break;
                 case 3:
-                    System.out.println("Chọn: \n" +
-                            "1. Xem danh sách giáo viên \n"+
-                            "2. Xem danh sách học sinh");
-                    choice = sc.nextInt();
-                    sc.nextLine();
+                    view.objectAction();
+                    choice = Integer.parseInt(sc.nextLine());
                     if (choice==1) {
-                        serviceMain.viewTeachers();
+                        view.displayTeacherList(teacherController.getTeachers());
                     } else if (choice==2){
-                        serviceMain.viewStudents();
+                        view.displayStudentList(studentController.getStudents());
                     } else {
                         view.displayInvalidInput();
                     }

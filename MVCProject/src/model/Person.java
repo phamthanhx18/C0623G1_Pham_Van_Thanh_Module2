@@ -1,7 +1,7 @@
 package model;
 
 public abstract class Person {
-    private String code;
+    private int code;
     private String name;
     private String birthdate;
     private String gender;
@@ -10,14 +10,14 @@ public abstract class Person {
 
     }
 
-    public Person(String code, String name, String birthdate, String gender) {
+    public Person(int code, String name, String birthdate, String gender) {
         this.code = code;
         this.name = name;
         this.birthdate = birthdate;
         this.gender = gender;
     }
 
-    public String getCode() {
+    public int getCode() {
         return code;
     }
 
@@ -31,6 +31,22 @@ public abstract class Person {
 
     public String getGender() {
         return gender;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setBirthdate(String birthdate) {
+        this.birthdate = birthdate;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     @Override

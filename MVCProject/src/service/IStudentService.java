@@ -1,16 +1,14 @@
-package repository;
+package service;
 
 import model.Student;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public interface IStudenRepo {
-
-    List<Student> getStudents();
+public interface IStudentService {
 
     void createStudent(Student student);
 
     void removeStudent(int code);
 
+    List<Student> getStudents();
 }
