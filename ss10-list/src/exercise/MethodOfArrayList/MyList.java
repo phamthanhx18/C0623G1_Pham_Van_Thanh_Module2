@@ -5,104 +5,89 @@ import java.util.Arrays;
 public class MyList<E> {
     private int size = 0;
     private static final int DEFAULT_CAPACITY = 10;
-    private E[] elements;
+    private Object elements[];
 
     public MyList() {
-        elements = (E[]) new Object[DEFAULT_CAPACITY];
+        elements = new Object[DEFAULT_CAPACITY];
     }
 
-    public MyList(int size) {
-        elements = (E[]) new Object[size];
+    public MyList(int capacity) {
+        elements = new Object[capacity];
     }
 
-    private void ensureCapa() {
-        if (size > elements.length) {
-            int biggerSize = size * 2 + 1;
-            elements = Arrays.copyOf(elements, biggerSize);
+    public void add(int index, E element) {
+        if (size == elements.length) {
+            ensureCapacity(size + 1);
         }
-    }
-
-    public void add(E e) {
-        size += 1;
-        ensureCapa();
-        elements[size - 1] = e;
-    }
-
-    public void add(E e, int index) {
-        if (index >= 0 && index <= size) {
-            size += 1;
-            ensureCapa();
-            for (int i = size - 2; i >= index; i--) {
-                elements[i + 1] = elements[i];
-            }
-            elements[index] = e;
+        for (int i = size - 1; i >= index; i--) {
+            elements[i + 1] = elements[i];
         }
-        return false;
+        elements[index] = element;
+        size++;
     }
 
-    public E get(int index) {
-        if (index >= 0 && index < size) {
-            return elements[index];
+    public E remove(int index) {
+        E removedElement = (E) elements[index];
+        for (int i = index; i < size - 1; i++) {
+            elements[i] = elements[i + 1];
         }
-        return null;
-    }
-
-    @Override
-    public MyList clone() {
-        MyList<E> clone = new MyList<>(elements.length);
-        for (E x : elements) {
-            clone.add(x);
-        }
-        return clone;
-    }
-
-    public E[] getData() {
-        return this.elements;
+        size--;
+        return removedElement;
     }
 
     public int size() {
         return size;
     }
 
-    public boolean remove(int index) {
-        if (index >= 0 && index < size) {
-            for (int i = index; i < size; i++) {
-                elements[i] = elements[i + 1];
-            }
-            size -= 1;
-            return true;
-        }
-        return false;
-    }
-
-    public void clear() {
-        elements = (E[]) new Object[DEFAULT_CAPACITY];
-        size = 0;
-    }
-
-    public int indexOf(E e) {
+    public MyList<E> clone() {
+        MyList<E> clonedList = new MyList<>(elements.length);
         for (int i = 0; i < size; i++) {
-            if (elements[i].equals(e)) {
-                return i;
-            }
+            clonedList.add(i, (E) elements[i]);
         }
-        return -1;
+        return clonedList;
     }
 
-    public boolean contains(E e) {
-        for (E x : elements) {
-            if (e.equals(x)) {
+    public boolean contains(E o) {
+        for (int i = 0; i < size; i++) {
+            if (o.equals(elements[i])) {
                 return true;
             }
         }
         return false;
     }
 
-    @Override
-    public String toString() {
-        return "MyList{" +
-                "size=" + size +
-                ", elements=" + Arrays.toString(elements) +
-                '}';
+    public int indexOf(E o) {
+        for (int i = 0; i < size; i++) {
+            if (o.equals(elements[i])) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public boolean add(E e) {
+        if (size == elements.length) {
+            ensureCapacity(size + 1);
+        }
+        elements[size++] = e;
+        return true;
+    }
+
+    public void ensureCapacity(int minCapacity) {
+        if (minCapacity > elements.length) {
+            Object[] newElements = new Object[elements.length * 2];
+            for (int i = 0; i < size; i++) {
+                newElements[i] = elements[i];
+            }
+            elements = newElements;
+        }
+    }
+
+    public E get(int index) {
+        return (E) elements[index];
+    }
+
+    public void clear() {
+        size = 0;
     }
 }
