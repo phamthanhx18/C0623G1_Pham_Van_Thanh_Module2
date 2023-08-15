@@ -16,7 +16,9 @@ public class MyList<E> {
     }
 
     public void add(int index, E element) {
-        if (size == elements.length) {
+        if (index> size || index <0) {
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size " + index );
+        } else if (size == elements.length) {
             ensureCapacity(size + 1);
         }
         for (int i = size - 1; i >= index; i--) {
@@ -27,6 +29,9 @@ public class MyList<E> {
     }
 
     public E remove(int index) {
+        if (index> size || index <0) {
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size " + index );
+        }
         E removedElement = (E) elements[index];
         for (int i = index; i < size - 1; i++) {
             elements[i] = elements[i + 1];
@@ -84,6 +89,9 @@ public class MyList<E> {
     }
 
     public E get(int index) {
+        if (index> size || index <0) {
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size " + index );
+        }
         return (E) elements[index];
     }
 
