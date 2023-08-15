@@ -18,26 +18,29 @@ public class MyList<E> {
     public void add(int index, E element) {
         if (index> size || index <0) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size " + index );
-        } else if (size == elements.length) {
-            ensureCapacity(size + 1);
+        } else {
+            if (size == elements.length) {
+                ensureCapacity(size + 1);
+            }
+            for (int i = size - 1; i >= index; i--) {
+                elements[i + 1] = elements[i];
+            }
+            elements[index] = element;
+            size++;
         }
-        for (int i = size - 1; i >= index; i--) {
-            elements[i + 1] = elements[i];
-        }
-        elements[index] = element;
-        size++;
     }
 
     public E remove(int index) {
         if (index> size || index <0) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size " + index );
+        } else {
+            E removedElement = (E) elements[index];
+            for (int i = index; i < size - 1; i++) {
+                elements[i] = elements[i + 1];
+            }
+            size--;
+            return removedElement;
         }
-        E removedElement = (E) elements[index];
-        for (int i = index; i < size - 1; i++) {
-            elements[i] = elements[i + 1];
-        }
-        size--;
-        return removedElement;
     }
 
     public int size() {
@@ -91,8 +94,9 @@ public class MyList<E> {
     public E get(int index) {
         if (index> size || index <0) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size " + index );
+        } else {
+            return (E) elements[index];
         }
-        return (E) elements[index];
     }
 
     public void clear() {

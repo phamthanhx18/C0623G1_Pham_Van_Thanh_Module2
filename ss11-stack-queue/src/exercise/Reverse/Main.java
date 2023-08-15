@@ -22,7 +22,6 @@ public class Main {
         }
 
         wStack = listPopStack;
-
         System.out.println("Gia tri mang sau khi dao");
         System.out.println(Arrays.toString(wStack.toArray()));
     }
