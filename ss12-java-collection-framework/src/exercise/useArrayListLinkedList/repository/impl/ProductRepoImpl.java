@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class ProductRepoImpl implements IProductRepo {
-    private List<Product> products = new ArrayList<>();
+    private final List<Product> products = new ArrayList<>();
 
     @Override
     public void addProduct(Product product) {

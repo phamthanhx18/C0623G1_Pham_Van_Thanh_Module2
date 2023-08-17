@@ -7,41 +7,41 @@ import exercise.useArrayListLinkedList.service.IProductService;
 import java.util.List;
 
 public class ProductServiceImpl implements IProductService {
-    ProductRepoImpl productService = new ProductRepoImpl();
+    private final ProductRepoImpl productRepo = new ProductRepoImpl();
 
     @Override
     public void addProduct(Product product) {
-        productService.addProduct(product);
+        productRepo.addProduct(product);
     }
 
     @Override
     public void removeProductById(int id) {
-        productService.removeProductById(id);
+        productRepo.removeProductById(id);
     }
 
     @Override
     public void editProductbyId(int id, Product product) {
-        productService.editProductbyId(id, product);
+        productRepo.editProductbyId(id, product);
     }
 
     @Override
     public Product searchProduct(String name) {
-        return productService.searchProduct(name);
+        return productRepo.searchProduct(name);
     }
 
     @Override
     public List<Product> getProducts() {
-        return productService.getProducts();
+        return productRepo.getProducts();
     }
 
     @Override
     public List<Product> sortListByPriceaAscending() {
-        return productService.sortListByPriceaAscending();
+        return productRepo.sortListByPriceaAscending();
     }
 
     @Override
     public List<Product> sortListByPriceaDecrease() {
-        return productService.sortListByPriceaDecrease();
+        return productRepo.sortListByPriceaDecrease();
     }
 
     @Override
