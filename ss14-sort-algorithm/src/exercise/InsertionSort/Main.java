@@ -1,12 +1,23 @@
 package exercise.InsertionSort;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        int [] list = {1,8,4,33,2,6,44,1332,5,99};
-        insertionSort(list);
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter list size:");
+        int size = scanner.nextInt();
+        int[] list = new int[size];
+        System.out.println("Enter " + list.length + " values:");
         for (int i = 0; i < list.length; i++) {
-            System.out.print(list[i] + " ");
+            list[i] = scanner.nextInt();
         }
+        System.out.println("Your input list: "+ Arrays.toString(list));
+
+        insertionSort(list);
+        System.out.println("Array before sort: "+ Arrays.toString(list));
+
     }
     public static void insertionSort(int[] list) {
         for (int i = 1; i < list.length; ++i) {
