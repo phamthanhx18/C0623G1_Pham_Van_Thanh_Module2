@@ -9,7 +9,7 @@ public class ExceptionTriangle extends Exception {
     }
 
     public void checkInputEdge(int a, int b, int c) throws Exception {
-        if (a < 0 || b < 0 || c < 0) {
+        if (a <= 0 || b <= 0 || c <= 0) {
             throw new ExceptionTriangle("Error: Cạnh phải là số dương !, vui lòng thử lại.");
         } else if (a + b <= c || a + c <= b || b + c <= a) {
             throw new ExceptionTriangle("Error: 2 cạnh không lớn hơn cạnh còn lại !, vui lòng thử lại");
