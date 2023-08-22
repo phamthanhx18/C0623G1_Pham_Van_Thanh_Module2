@@ -47,7 +47,10 @@ public class Main {
                     }
                 } while (c <= 0);
                 exTriangle.checkInputEdge(a, b, c);
-            } catch (Exception e) {
+            } catch (ExceptionTriangle e) {
+                System.out.println(e.getMessage());
+            }
+            catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         } while (a + b <= c || a + c <= b || b + c <= a);
