@@ -5,18 +5,29 @@ import java.util.Scanner;
 
 public class Main {
     public void readFileBinary(File pathfile, File pathFileCopy) {
+        FileInputStream fileInputStream = null;
+        FileOutputStream writeOutputStream = null;
         try {
-            FileInputStream fileInputStream = new FileInputStream(pathfile);
-            FileOutputStream writeOutputStream = new FileOutputStream(pathFileCopy);
+            fileInputStream = new FileInputStream(pathfile);
+            writeOutputStream = new FileOutputStream(pathFileCopy);
 
             int byt;
             while ((byt = fileInputStream.read()) != -1) {
                 writeOutputStream.write(byt);
             }
-            fileInputStream.close();
-            writeOutputStream.close();
         } catch (IOException e) {
             System.out.println(e.getMessage());
+        } finally {
+            try {
+                if (writeOutputStream !=null) {
+                    writeOutputStream.close();
+                }
+                if (fileInputStream !=null) {
+                    fileInputStream.close();
+                }
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
         }
     }
 
