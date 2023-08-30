@@ -19,18 +19,23 @@ public class CustomerView {
             switch (choiceCustomer) {
                 case 1:
                     displayListCustomer(customerController.getList());
+                    MainView.displayMessegeSucces();
                     break;
                 case 2:
                     customerController.add(inputCustomer());
+                    MainView.displayMessegeSucces();
                     break;
                 case 3:
                     customerController.editCustomer(inputIdCustomer(),inputCustomer());
+                    MainView.displayMessegeSucces();
                     break;
                 case 4:
                     customerController.del(inputIdCustomer());
+                    MainView.displayMessegeSucces();
                     break;
                 case 5:
                     customerController.searchCusomer(inputNameCustomer());
+                    MainView.displayMessegeSucces();
                     break;
                 case 6:
                     break;

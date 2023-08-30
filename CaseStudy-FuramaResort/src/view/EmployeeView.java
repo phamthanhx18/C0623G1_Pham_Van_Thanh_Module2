@@ -21,18 +21,23 @@ public class EmployeeView {
             switch (choiceEmployee) {
                 case 1:
                     displayListEmployee(employeeController.getList());
+                    MainView.displayMessegeSucces();
                     break;
                 case 2:
                     employeeController.add(inputEmployee());
+                    MainView.displayMessegeSucces();
                     break;
                 case 3:
                     employeeController.editEmployee(inputIdEmployee(),inputEmployee());
+                    MainView.displayMessegeSucces();
                     break;
                 case 4:
                     employeeController.del(inputIdEmployee());
+                    MainView.displayMessegeSucces();
                     break;
                 case 5:
                     employeeController.searchEmployee(inputNameEmployee());
+                    MainView.displayMessegeSucces();
                     break;
                 case 6:
                     break;

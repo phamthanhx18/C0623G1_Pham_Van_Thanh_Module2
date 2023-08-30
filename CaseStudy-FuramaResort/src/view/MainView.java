@@ -53,5 +53,7 @@ public class MainView {
         System.out.println("Lua chon khong hop le !");
     }
 
-
+    public static void displayMessegeSucces(){
+        System.out.println("Thao tác thành công");
+    }
 }
