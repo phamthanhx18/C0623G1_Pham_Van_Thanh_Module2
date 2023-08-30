@@ -28,7 +28,7 @@ public class FacilityView {
                     falicityController.add(inputFacility());
                     break;
                 case 3:
-                    System.out.println("Options3");
+                    falicityController.displayFacilityMaintenance();
                     break;
                 case 4:
                     falicityController.del(inputIdFacility());
@@ -146,8 +146,12 @@ public class FacilityView {
     }
 
     public void displayListFacitily(List<Facility> facilitys){
-        for (Facility facility: facilitys) {
-            System.out.println(facility);
+        if (facilitys.isEmpty()){
+            System.out.println("Khong co ket qua");
+        } else {
+            for (Facility facility: facilitys) {
+                System.out.println(facility);
+            }
         }
     }
 

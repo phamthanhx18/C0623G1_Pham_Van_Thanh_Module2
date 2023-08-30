@@ -36,8 +36,7 @@ public class EmployeeView {
                     MainView.displayMessegeSucces();
                     break;
                 case 5:
-                    employeeController.searchEmployee(inputNameEmployee());
-                    MainView.displayMessegeSucces();
+                    displayListEmployee(employeeController.searchEmployee(inputNameEmployee()));
                     break;
                 case 6:
                     break;
@@ -139,8 +138,12 @@ public class EmployeeView {
     }
 
     public void displayListEmployee(List<Employee> employees){
-        for (Employee employee: employees) {
-            System.out.println(employee);
+        if (employees.isEmpty()){
+            System.out.println("Không có dữ liệu");
+        }else {
+            for (Employee employee: employees) {
+                System.out.println(employee);
+            }
         }
     }
 }

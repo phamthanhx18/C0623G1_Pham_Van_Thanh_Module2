@@ -34,8 +34,7 @@ public class CustomerView {
                     MainView.displayMessegeSucces();
                     break;
                 case 5:
-                    customerController.searchCusomer(inputNameCustomer());
-                    MainView.displayMessegeSucces();
+                    displayListCustomer(customerController.searchCusomer(inputNameCustomer()));
                     break;
                 case 6:
                     break;
@@ -130,9 +129,13 @@ public class CustomerView {
         return string;
     }
 
-    public void displayListCustomer(List<Customer> Customers){
-        for (Customer Customer: Customers) {
-            System.out.println(Customer);
+    public void displayListCustomer(List<Customer> customers){
+        if (customers.isEmpty()){
+            System.out.println("Khong co ket qua");
+        } else {
+            for (Customer customer: customers) {
+                System.out.println(customer);
+            }
         }
     }
 
