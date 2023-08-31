@@ -5,6 +5,7 @@ import repository.IFacilityRepository;
 import repository.impl.FacilityRepositoryImpl;
 import service.IFacilityService;
 
+import java.util.LinkedHashMap;
 import java.util.List;
 
 public class FacilityServiceImpl implements IFacilityService {
@@ -22,6 +23,10 @@ public class FacilityServiceImpl implements IFacilityService {
     @Override
     public List<Facility> getList() {
         return facilityRepository.getList();
+    }
+
+    public LinkedHashMap<Facility,Integer> integerLinkedHashMap() {
+        return facilityRepository.getListHashMap();
     }
 
     @Override

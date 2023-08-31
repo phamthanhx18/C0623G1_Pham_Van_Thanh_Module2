@@ -7,7 +7,9 @@ import model.Facility.Room;
 import model.Facility.Villa;
 import utils.RegexUtils;
 
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 public class FacilityView {
@@ -145,12 +147,13 @@ public class FacilityView {
         return facility;
     }
 
-    public void displayListFacitily(List<Facility> facilitys){
+    public void displayListFacitily(LinkedHashMap<Facility,Integer> facilitys){
         if (facilitys.isEmpty()){
             System.out.println("Khong co ket qua");
         } else {
-            for (Facility facility: facilitys) {
-                System.out.println(facility);
+            for (Map.Entry<Facility,Integer> facility: facilitys.entrySet()) {
+                Facility facility1 = facility.getKey();
+                System.out.println(facility1 +" SLSD: "+facility.getValue());
             }
         }
     }

@@ -4,7 +4,7 @@ import model.Facility.Facility;
 import service.IFacilityService;
 import service.impl.FacilityServiceImpl;
 
-import java.util.List;
+import java.util.LinkedHashMap;
 
 public class FalicityController {
     IFacilityService facilityService = new FacilityServiceImpl();
@@ -17,8 +17,8 @@ public class FalicityController {
         facilityService.add(facility);
     }
 
-    public List<Facility> getList() {
-        return facilityService.getList();
+    public LinkedHashMap<Facility,Integer> getList() {
+        return facilityService.integerLinkedHashMap();
     }
 
     public void del(String id) {
