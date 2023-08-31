@@ -17,8 +17,15 @@ public class FacilityRepositoryImpl implements IFacilityRepository {
     private final String COMMA = ",";
 
     @Override
-    public void displayFacilityMaintenance() {
-        System.out.println("Đang thực hiện");
+    public List<Facility> displayFacilityMaintenance() {
+        LinkedHashMap<Facility,Integer> facilityList = getListHashMap();
+        List<Facility> listMaintenance = new ArrayList<>();
+        for (Map.Entry<Facility, Integer> entry: facilityList.entrySet()) {
+            if (entry.getValue()>=5){
+                listMaintenance.add(entry.getKey());
+            }
+        }
+        return listMaintenance;
     }
 
     @Override

@@ -5,12 +5,13 @@ import service.IFacilityService;
 import service.impl.FacilityServiceImpl;
 
 import java.util.LinkedHashMap;
+import java.util.List;
 
 public class FalicityController {
     IFacilityService facilityService = new FacilityServiceImpl();
 
-    public void displayFacilityMaintenance() {
-        facilityService.displayFacilityMaintenance();
+    public List<Facility> displayFacilityMaintenance() {
+        return facilityService.displayFacilityMaintenance();
     }
 
     public void add(Facility facility) {

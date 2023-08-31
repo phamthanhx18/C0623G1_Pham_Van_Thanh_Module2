@@ -11,8 +11,8 @@ import java.util.List;
 public class FacilityServiceImpl implements IFacilityService {
     private final IFacilityRepository facilityRepository = new FacilityRepositoryImpl();
     @Override
-    public void displayFacilityMaintenance() {
-        facilityRepository.displayFacilityMaintenance();
+    public List<Facility> displayFacilityMaintenance() {
+        return facilityRepository.displayFacilityMaintenance();
     }
 
     @Override

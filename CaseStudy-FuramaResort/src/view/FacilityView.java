@@ -30,7 +30,7 @@ public class FacilityView {
                     falicityController.add(inputFacility());
                     break;
                 case 3:
-                    falicityController.displayFacilityMaintenance();
+                    displayList(falicityController.displayFacilityMaintenance());
                     break;
                 case 4:
                     falicityController.del(inputIdFacility());
@@ -154,6 +154,16 @@ public class FacilityView {
             for (Map.Entry<Facility,Integer> facility: facilitys.entrySet()) {
                 Facility facility1 = facility.getKey();
                 System.out.println(facility1 +" SLSD: "+facility.getValue());
+            }
+        }
+    }
+
+    public void displayList(List<Facility> facilitys){
+        if (facilitys.isEmpty()){
+            System.out.println("Khong co ket qua");
+        } else {
+            for (Facility facility: facilitys) {
+                System.out.println(facility);
             }
         }
     }
